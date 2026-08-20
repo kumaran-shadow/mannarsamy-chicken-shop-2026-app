@@ -1,0 +1,36 @@
+# Ignore all dependencies and their backups
+node_modules
+**/node_modules
+node_modules - Copy
+**/node_modules - Copy
+
+# Ignore heavy video assets to bypass Vercel Hobby 100MB file limit
+**/shop_tour.mp4
+**/video/shop_tour.mp4
+
+# Ignore all duplicate backup folders and files
+* - Copy
+**/* - Copy
+* - Copy.html
+styles - Copy.css
+logo - Copy.png
+poster - Copy.jpg
+
+# Ignore local build outputs (Vercel will build them on the server)
+frontend/dist
+dist
+
+# Ignore local env and system files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode
+.idea
+.gemini
+.agents
+scratch
+*.log
+.DS_Store
+Thumbs.db

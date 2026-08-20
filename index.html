@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mannarsamy.E Chicken Shop | Premium Fresh Chicken & Culinary Center</title>
+  <meta name="description"
+    content="Mannarsamy.E Chicken Shop - Premium 100% fresh, hygienic & healthy chicken daily supply. Located at Om Sakthi Nagar, Ladavaram, Kalasapakkam, TVM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="dark-theme">
+  <!-- Background Canvas for Floating Embers & Lighting -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Global Header Navigation -->
+  <header id="main-header" class="header-hidden">
+    <div class="nav-container">
+      <a href="#page-main" class="brand-logo" id="header-brand">
+        <div class="logo-icon-mini">
+          <img src="./logo.png" alt="Mannarsamy Logo" class="mini-logo-img" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">MANNARSAMY.E</span>
+          <span class="brand-tag">CHICKEN SHOP</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" data-target="page-intro">
+          <span class="nav-num">01</span> Intro
+        </button>
+        <button class="nav-btn" data-target="page-main">
+          <span class="nav-num">02</span> Home Shop
+        </button>
+        <button class="nav-btn" data-target="page-poster3d">
+          <span class="nav-num">03</span> 3D Experience
+        </button>
+        <button class="nav-btn" data-target="section-menu">
+          <span class="nav-num">04</span> Fresh Menu
+        </button>
+        <button class="nav-btn" data-target="section-contact">
+          <span class="nav-num">05</span> Location
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:9943592771" class="phone-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <span>9943592771</span>
+        </a>
+        <button class="cta-nav-btn" id="btn-quick-order">
+          <span>Order Now</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport Container -->
+  <main id="app-viewport">
+
+    <!-- PAGE 1: Animated 3D Logo Intro -->
+    <section id="page-intro" class="page-section active-page">
+      <div class="intro-container">
+        <!-- Interactive 3D Charging Logo Stage -->
+        <div class="logo-charging-stage" id="intro-logo-stage">
+          <!-- Canvas for rotating multi-color glowing rings & energetic aura -->
+          <canvas id="intro-ring-canvas" width="650" height="650"></canvas>
+
+          <!-- Central Mannarsamy 3D Logo Emblem -->
+          <div class="emblem-center" id="emblem-element">
+            <div class="emblem-glow-outer"></div>
+            <div class="emblem-inner-ring"></div>
+            <div class="emblem-shine-sweep"></div>
+            <img src="./logo.png" alt="Mannarsamy 3D Golden Logo" class="intro-logo-3d-img" id="intro-logo-img" />
+            <div class="energy-sparks"></div>
+          </div>
+        </div>
+
+        <!-- Charging Status Indicator -->
+        <div class="charging-status-box">
+          <div class="status-line">
+            <span class="pulse-dot"></span>
+            <span id="charging-text">TECHNOLOGY ACTIVATION & BULLSEYE QUALITY</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="charging-progress"></div>
+          </div>
+        </div>
+
+        <!-- Glowing START Button -->
+        <div class="intro-start-wrap">
+          <button id="btn-intro-start" class="btn-3d-start">
+            <span class="btn-ring-glow"></span>
+            <span class="btn-text-content">
+              <span>START EXPERIENCE</span>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="intro-footer-note">
+          <p>100% Fresh & Healthy • Farm Birds • Daily Hygienic Supply</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: Main Homepage -->
+    <section id="page-main" class="page-section">
+
+      <!-- STICKY SCROLL-DRIVEN 184-FRAME ANIMATION TRACK -->
+      <section id="scroll-sequence-track" class="scroll-track-container">
+        <div class="sticky-sequence-viewport">
+          <!-- Canvas for 184-frame scroll animation -->
+          <canvas id="scroll-hero-canvas" width="1280" height="720"></canvas>
+          <div class="canvas-ambient-vignette"></div>
+
+          <!-- Dynamic Scroll-Driven Content Overlays -->
+          <div class="scroll-overlay-card" id="scroll-text-overlay">
+            <div class="brand-badge-pill" id="scroll-badge">
+              <span class="badge-dot"></span>
+              <span id="scroll-badge-text">CREATIVE 3D EXPERIENCE • EST. OM SAKTHI NAGAR, TVM</span>
+            </div>
+
+            <h1 class="hero-title" id="scroll-headline">
+              <span class="headline-animated-build" id="scroll-build-text">BUILD ANIMATED WEBSITES</span> <br />
+              <span class="text-gradient-gold" id="scroll-sub-text">MANNARSAMY.E CHICKEN CENTER</span>
+            </h1>
+
+            <p class="hero-tagline" id="scroll-tagline">
+              "Fresh & Healthy, Every Day!"
+            </p>
+
+            <div class="hero-cta-group" id="scroll-cta-row">
+              <button class="btn-primary-cta" id="btn-hero-order-scroll">
+                <span>ORDER FROM MANNARSAMY.E →</span>
+                <div class="btn-glow-layer"></div>
+              </button>
+              <button class="btn-secondary-cta" id="btn-hero-explore-3d-scroll">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+                <span>3D Poster & Visuals</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Floating Scroll Prompt Indicator -->
+          <div class="scroll-prompt-pill" id="scroll-prompt">
+            <span class="prompt-mouse-icon">🖱️</span>
+            <span>SCROLL DOWN TO ANIMATE MOTION</span>
+            <span class="prompt-arrow">↓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Banner Section -->
+      <section class="hero-section" id="hero-section">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="brand-badge-pill hero-scroll-reveal" data-reveal="fade-up">
+              <span class="badge-dot"></span>
+              <span>CREATIVE 3D EXPERIENCE • EST. OM SAKTHI NAGAR, TVM</span>
+            </div>
+
+            <!-- Headline: BUILD ANIMATED WEBSITES -->
+            <h1 class="hero-title hero-scroll-reveal" data-reveal="fade-up">
+              <span class="headline-animated-build">BUILD ANIMATED WEBSITES</span> <br />
+              <span class="text-gradient-gold">MANNARSAMY.E CHICKEN CENTER</span>
+            </h1>
+
+            <p class="hero-tagline hero-scroll-reveal" data-reveal="fade-up">
+              "Fresh & Healthy, Every Day!"
+            </p>
+            <p class="hero-desc hero-scroll-reveal" data-reveal="fade-up">
+              Premium tender chicken, hygienic processing, daily farm fresh supply, and healthy live stock. Experience
+              our continuous cinematic 3D visual journey.
+            </p>
+
+            <div class="hero-cta-group hero-scroll-reveal" data-reveal="fade-up">
+              <button class="btn-primary-cta" id="btn-hero-order">
+                <span>ORDER FROM MANNARSAMY.E →</span>
+                <div class="btn-glow-layer"></div>
+              </button>
+              <button class="btn-secondary-cta" id="btn-hero-explore-3d">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+                <span>3D Poster & Visuals</span>
+              </button>
+            </div>
+
+            <!-- Highlights Quick Specs -->
+            <div class="hero-features-row hero-scroll-reveal" data-reveal="fade-up">
+              <div class="feat-box">
+                <div class="feat-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#ffb700" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div class="feat-info">
+                  <strong>100% Hygienic</strong>
+                  <span>Cleaned & Prepared Daily</span>
+                </div>
+              </div>
+              <div class="feat-box">
+                <div class="feat-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#ff6b00" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                  </svg>
+                </div>
+                <div class="feat-info">
+                  <strong>Daily Fresh Supply</strong>
+                  <span>Direct Farm Birds</span>
+                </div>
+              </div>
+              <div class="feat-box">
+                <div class="feat-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e60000" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                </div>
+                <div class="feat-info">
+                  <strong>Quality Assured</strong>
+                  <span>Trusted Proprietor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Poster Visual Card (Image 1 in Scroll Sequence) -->
+          <div class="hero-visual-card hero-scroll-reveal" data-reveal="zoom-in" id="scroll-img-1">
+            <div class="poster-card-glow"></div>
+            <div class="poster-card-wrapper">
+              <img src="./poster.jpg" alt="Mannarsamy.E Chicken Center Poster" class="hero-poster-img" />
+              <div class="poster-overlay-badge">
+                <span class="badge-spark">★</span>
+                <span>IMAGE 1: ORIGINAL SHOP POSTER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promises Banner Bar -->
+      <section class="promises-bar">
+        <div class="promises-track">
+          <div class="promise-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+            </svg>
+            <span>HIGH QUALITY PRODUCTS</span>
+          </div>
+          <div class="promise-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+            <span>HYGIENIC & CLEAN</span>
+          </div>
+          <div class="promise-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+            </svg>
+            <span>DAILY FRESH SUPPLY</span>
+          </div>
+          <div class="promise-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99z" />
+            </svg>
+            <span>LIVE STOCK - OUR FARM BIRDS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Interactive 3D Poster Showcase & Culinary Sequence -->
+      <section id="page-poster3d" class="section-container page-section-container">
+        <div class="poster3d-header text-center">
+          <span class="section-tag">3D INTERACTIVE SHOWCASE</span>
+          <h2 class="section-title">Cinematic 3D Shop Poster & Address Presentation</h2>
+          <p class="section-sub">Move your mouse across the poster to experience dynamic 3D depth, specular lighting,
+            and interactive glass buttons.</p>
+        </div>
+
+        <!-- 3D Poster Stage Container -->
+        <div class="poster-stage-3d" id="poster-stage">
+          <!-- Interactive Spotlight Cursor Glow -->
+          <div class="spotlight-glow" id="poster-spotlight"></div>
+
+          <!-- 3D Suspended Poster Element -->
+          <div class="poster-frame-3d" id="poster-card-3d">
+            <div class="poster-inner">
+              <img src="./poster.jpg" alt="Mannarsamy 3D Poster" id="poster-img-3d" />
+              <div class="glare-effect" id="poster-glare"></div>
+              <div class="poster-shadow"></div>
+            </div>
+          </div>
+
+          <!-- Two 3D Glass / Metal Custom Buttons -->
+          <div class="buttons-3d-container">
+            <!-- Button 1: Address -->
+            <button class="glass-button-3d" id="btn-3d-address" data-tilt>
+              <div class="glass-bg"></div>
+              <div class="glass-border"></div>
+              <div class="glass-shine"></div>
+              <div class="glass-content">
+                <span class="btn-icon">📍</span>
+                <div class="btn-text">
+                  <span class="btn-label">SHOP LOCATION ADDRESS</span>
+                  <strong class="btn-value">OM SAKTHI NAGAR, LADAVARAM POST, KALASAPAKKAM TALUKA, TVM</strong>
+                </div>
+              </div>
+            </button>
+
+            <!-- Button 2: Restaurant Name -->
+            <button class="glass-button-3d" id="btn-3d-name" data-tilt>
+              <div class="glass-bg"></div>
+              <div class="glass-border"></div>
+              <div class="glass-shine"></div>
+              <div class="glass-content">
+                <span class="btn-icon">🍗</span>
+                <div class="btn-text">
+                  <span class="btn-label">BRAND NAME</span>
+                  <strong class="btn-value">MANNARSAMY</strong>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- 184-Frame Culinary Sequence Interactive Player -->
+        <div class="culinary-sequence-wrapper">
+          <div class="sequence-header text-center">
+            <span class="section-tag">FARM TO FEAST ANIMATION</span>
+            <h3>184-Frame Live Cooking Journey</h3>
+            <p>Scrub the slider or drag across the player to watch fresh raw chicken sizzle and transform into a golden
+              roast!</p>
+          </div>
+
+          <div class="sequence-canvas-box" id="sequence-box">
+            <canvas id="sequence-canvas" width="1280" height="720"></canvas>
+            <div class="sequence-overlay-info">
+              <span id="frame-counter">FRAME: 1 / 184</span>
+              <span id="sequence-stage-label">Fresh Ingredients Preparation</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="sequence-controls">
+            <button id="btn-seq-play" class="seq-btn">
+              <span id="play-icon">▶ Play Motion</span>
+            </button>
+            <input type="range" id="sequence-slider" min="1" max="184" value="1" step="1" />
+            <button id="btn-seq-reset" class="seq-btn">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Interactive Fresh Chicken Menu -->
+      <section id="section-menu" class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">FRESH & TENDER CUTS</span>
+          <h2 class="section-title">Our Premium Fresh Chicken Selection</h2>
+          <p class="section-sub">Sourced directly from certified healthy farm birds. Processed cleanly on order.</p>
+        </div>
+
+        <div class="menu-grid-6040">
+          <!-- Item 1 -->
+          <div class="menu-card-6040" data-item="Whole Skinless Fresh Chicken" data-price="240">
+            <div class="food-image-side">
+              <div class="card-tag">BESTSELLER</div>
+              <img src="./image c/ezgif-frame-001.jpg" alt="Whole Fresh Chicken" class="food-side-img" />
+              <div class="food-side-overlay">
+                <h3>Whole Skinless Fresh Chicken</h3>
+                <p>Tender fresh skinless chicken dressed cleanly. Perfect for curries & roasting.</p>
+                <div class="unit-price-pill">Price: ₹<span class="unit-price-val">240</span> / kg</div>
+              </div>
+            </div>
+
+            <div class="control-panel-side">
+              <div class="panel-left-col">
+                <div class="qty-control-neon">
+                  <button class="qty-btn qty-btn-minus" aria-label="Decrease quantity">−</button>
+                  <div class="qty-val-wrapper">
+                    <input type="text" class="qty-num-input" value="1" inputmode="decimal"
+                      aria-label="Quantity in KG" />
+                    <span class="kg-unit">KG</span>
+                  </div>
+                  <button class="qty-btn qty-btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <div class="bottom-left-row">
+                  <div class="amount-neon-box">
+                    <span class="amount-val-text">₹<strong class="total-amount-num">240</strong></span>
+                  </div>
+                  <button class="order-neon-btn btn-card-order-direct">
+                    <span>ORDER</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="panel-right-col">
+                <button class="change-neon-btn btn-card-change-price">
+                  <span class="change-icon">🔒</span>
+                  <span class="change-text">CHANGE</span>
+                </button>
+
+                <!-- Compact Password Verification Box -->
+                <div class="compact-pass-popup">
+                  <div class="popup-header">ENTER PASSWORD</div>
+                  <div class="popup-body">
+                    <input type="password" class="compact-pass-input" placeholder="••••••" maxlength="6"
+                      inputmode="numeric" pattern="[0-9]*" />
+                    <button class="circular-verify-btn" title="Verify 6-Digit Password">
+                      <span class="verify-icon">✓</span>
+                    </button>
+                  </div>
+                  <div class="popup-error-msg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-card-6040" data-item="Fresh Drumsticks & Wings Cut" data-price="270">
+            <div class="food-image-side">
+              <div class="card-tag">POPULAR</div>
+              <img src="./image c/ezgif-frame-090.jpg" alt="Fresh Drumsticks & Wings" class="food-side-img" />
+              <div class="food-side-overlay">
+                <h3>Fresh Drumsticks & Wings Cut</h3>
+                <p>Juicy drumsticks & crisp wing cuts. Ideal for frying, barbecuing & tandoori.</p>
+                <div class="unit-price-pill">Price: ₹<span class="unit-price-val">270</span> / kg</div>
+              </div>
+            </div>
+
+            <div class="control-panel-side">
+              <div class="panel-left-col">
+                <div class="qty-control-neon">
+                  <button class="qty-btn qty-btn-minus" aria-label="Decrease quantity">−</button>
+                  <div class="qty-val-wrapper">
+                    <input type="text" class="qty-num-input" value="1" inputmode="decimal"
+                      aria-label="Quantity in KG" />
+                    <span class="kg-unit">KG</span>
+                  </div>
+                  <button class="qty-btn qty-btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <div class="bottom-left-row">
+                  <div class="amount-neon-box">
+                    <span class="amount-val-text">₹<strong class="total-amount-num">270</strong></span>
+                  </div>
+                  <button class="order-neon-btn btn-card-order-direct">
+                    <span>ORDER</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="panel-right-col">
+                <button class="change-neon-btn btn-card-change-price">
+                  <span class="change-icon">🔒</span>
+                  <span class="change-text">CHANGE</span>
+                </button>
+
+                <!-- Compact Password Verification Box -->
+                <div class="compact-pass-popup">
+                  <div class="popup-header">ENTER PASSWORD</div>
+                  <div class="popup-body">
+                    <input type="password" class="compact-pass-input" placeholder="••••••" maxlength="6"
+                      inputmode="numeric" pattern="[0-9]*" />
+                    <button class="circular-verify-btn" title="Verify 6-Digit Password">
+                      <span class="verify-icon">✓</span>
+                    </button>
+                  </div>
+                  <div class="popup-error-msg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-card-6040" data-item="Tender Boneless Breast Fillet" data-price="320">
+            <div class="food-image-side">
+              <div class="card-tag">HEALTHY</div>
+              <img src="./image c/ezgif-frame-180.jpg" alt="Boneless Breast Cuts" class="food-side-img" />
+              <div class="food-side-overlay">
+                <h3>Tender Boneless Breast Fillet</h3>
+                <p>100% lean boneless chicken breast. High protein, tender texture, zero waste.</p>
+                <div class="unit-price-pill">Price: ₹<span class="unit-price-val">320</span> / kg</div>
+              </div>
+            </div>
+
+            <div class="control-panel-side">
+              <div class="panel-left-col">
+                <div class="qty-control-neon">
+                  <button class="qty-btn qty-btn-minus" aria-label="Decrease quantity">−</button>
+                  <div class="qty-val-wrapper">
+                    <input type="text" class="qty-num-input" value="1" inputmode="decimal"
+                      aria-label="Quantity in KG" />
+                    <span class="kg-unit">KG</span>
+                  </div>
+                  <button class="qty-btn qty-btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <div class="bottom-left-row">
+                  <div class="amount-neon-box">
+                    <span class="amount-val-text">₹<strong class="total-amount-num">320</strong></span>
+                  </div>
+                  <button class="order-neon-btn btn-card-order-direct">
+                    <span>ORDER</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="panel-right-col">
+                <button class="change-neon-btn btn-card-change-price">
+                  <span class="change-icon">🔒</span>
+                  <span class="change-text">CHANGE</span>
+                </button>
+
+                <!-- Compact Password Verification Box -->
+                <div class="compact-pass-popup">
+                  <div class="popup-header">ENTER PASSWORD</div>
+                  <div class="popup-body">
+                    <input type="password" class="compact-pass-input" placeholder="••••••" maxlength="6"
+                      inputmode="numeric" pattern="[0-9]*" />
+                    <button class="circular-verify-btn" title="Verify 6-Digit Password">
+                      <span class="verify-icon">✓</span>
+                    </button>
+                  </div>
+                  <div class="popup-error-msg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-card-6040" data-item="Live Farm Country Birds" data-price="380">
+            <div class="food-image-side">
+              <div class="card-tag">FARM FRESH</div>
+              <img src="./poster.jpg" alt="Live Farm Birds" class="food-side-img" />
+              <div class="food-side-overlay">
+                <h3>Live Farm Birds & Country Birds</h3>
+                <p>Naturally raised healthy farm birds & authentic country chicken (Nattu Kozhi).</p>
+                <div class="unit-price-pill">Price: ₹<span class="unit-price-val">380</span> / kg</div>
+              </div>
+            </div>
+
+            <div class="control-panel-side">
+              <div class="panel-left-col">
+                <div class="qty-control-neon">
+                  <button class="qty-btn qty-btn-minus" aria-label="Decrease quantity">−</button>
+                  <div class="qty-val-wrapper">
+                    <input type="text" class="qty-num-input" value="1" inputmode="decimal"
+                      aria-label="Quantity in KG" />
+                    <span class="kg-unit">KG</span>
+                  </div>
+                  <button class="qty-btn qty-btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <div class="bottom-left-row">
+                  <div class="amount-neon-box">
+                    <span class="amount-val-text">₹<strong class="total-amount-num">380</strong></span>
+                  </div>
+                  <button class="order-neon-btn btn-card-order-direct">
+                    <span>ORDER</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="panel-right-col">
+                <button class="change-neon-btn btn-card-change-price">
+                  <span class="change-icon">🔒</span>
+                  <span class="change-text">CHANGE</span>
+                </button>
+
+                <!-- Compact Password Verification Box -->
+                <div class="compact-pass-popup">
+                  <div class="popup-header">ENTER PASSWORD</div>
+                  <div class="popup-body">
+                    <input type="password" class="compact-pass-input" placeholder="••••••" maxlength="6"
+                      inputmode="numeric" pattern="[0-9]*" />
+                    <button class="circular-verify-btn" title="Verify 6-Digit Password">
+                      <span class="verify-icon">✓</span>
+                    </button>
+                  </div>
+                  <div class="popup-error-msg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Proprietor & Quality Story -->
+      <section class="proprietor-section">
+        <div class="proprietor-card">
+          <div class="proprietor-img-col">
+            <img src="./poster.jpg" alt="Proprietor Mannarsamy" class="prop-img" />
+            <div class="prop-badge">
+              <span>100% FRESH & QUALITY</span>
+            </div>
+          </div>
+          <div class="proprietor-text-col">
+            <span class="section-tag">PROPRIETOR COMMITMENT</span>
+            <h2>Mannarsamy.E — Trusted Freshness & Quality Every Day</h2>
+            <p>
+              Welcome to <strong>Mannarsamy.E Chicken Shop</strong>. We take pride in delivering the cleanest,
+              healthiest, and most tender farm chicken in Kalasapakkam Taluka. From live stock monitoring to hygienic
+              processing, every customer receives premium quality with complete satisfaction guaranteed.
+            </p>
+            <div class="prop-contact-box">
+              <div class="contact-pill">
+                <span class="pill-title">Direct Order Phone</span>
+                <a href="tel:9943592771" class="pill-number">📞 9943592771</a>
+              </div>
+              <div class="contact-pill">
+                <span class="pill-title">Shop Location</span>
+                <span class="pill-address">Om Sakthi Nagar, Ladavaram Post, Kalasapakkam Taluka, TVM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Location & Contact -->
+      <section id="section-contact" class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">VISIT OUR SHOP</span>
+          <h2 class="section-title">Shop Address & Contact Information</h2>
+          <p class="section-sub">We welcome daily retail customers, bulk hotel supplies, and party orders.</p>
+        </div>
+
+        <div class="contact-card-grid">
+          <div class="contact-info-card">
+            <div class="icon-circle">📍</div>
+            <h3>Main Shop Location</h3>
+            <p class="address-text">
+              <strong>MANNARSAMY.E CHICKEN SHOP</strong><br />
+              OM SAKTHI NAGAR, LADAVARAM POST,<br />
+              KALASAPAKKAM TALUKA, TVM.
+            </p>
+            <a href="https://maps.google.com/?q=Kalasapakkam+Tiruvannamalai" target="_blank" class="link-map">Open in
+              Google Maps →</a>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon-circle">📱</div>
+            <h3>Phone & WhatsApp Order</h3>
+            <p class="address-text">
+              Call or WhatsApp for immediate delivery & bulk stock inquiry.
+            </p>
+            <div class="big-phone-number">
+              <a href="tel:9943592771">9943592771</a>
+            </div>
+            <a href="https://wa.me/919943592771?text=Hello%20Mannarsamy.E%20Chicken%20Shop,%20I%20want%20to%20order%20fresh%20chicken"
+              target="_blank" class="btn-whatsapp-direct">
+              <span>💬 Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon-circle">⏰</div>
+            <h3>Shop Timings</h3>
+            <p class="address-text">
+              <strong>Monday - Sunday:</strong> 6:00 AM - 9:00 PM<br />
+              <strong>Sunday Special Supply:</strong> 5:00 AM onwards<br />
+              <em>Fresh stock replenished every morning!</em>
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">MANNARSAMY.E CHICKEN SHOP</span>
+        <p>OM SAKTHI NAGAR, LADAVARAM POST, KALASAPAKKAM TALUKA, TVM</p>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:9943592771">📞 9943592771</a>
+        <p>© 2026 Mannarsamy.E Chicken Shop. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Order Modal -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-modal-close">×</button>
+      <div class="modal-header">
+        <h3>Order Fresh Chicken</h3>
+        <p>Mannarsamy.E Chicken Shop — Om Sakthi Nagar, TVM</p>
+      </div>
+      <form id="order-form">
+        <div class="form-group">
+          <label>Select Item Cut:</label>
+          <select id="select-item" class="form-control">
+            <option value="Whole Fresh Chicken">Whole Fresh Skinless Chicken (₹240/kg)</option>
+            <option value="Chicken Drumsticks & Wings">Fresh Drumsticks & Wings Cut (₹270/kg)</option>
+            <option value="Boneless Breast Cuts">Tender Boneless Breast Fillet (₹320/kg)</option>
+            <option value="Live Farm Country Birds">Live Farm Country Birds (₹380/kg)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quantity (in KG):</label>
+          <input type="number" id="input-qty" value="1" min="0.5" step="0.5" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Your Name:</label>
+          <input type="text" id="input-name" placeholder="Enter your full name" required class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Delivery / Pickup Address:</label>
+          <textarea id="input-address" placeholder="Enter your address or note for pickup" rows="2"
+            class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn-submit-order">
+          <span>Send Order via WhatsApp (9943592771) →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- Price Edit Password Modal -->
+  <div class="modal-overlay" id="price-edit-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-price-modal-close">×</button>
+      <div class="modal-header">
+        <h3>🔒 Owner Password Verification</h3>
+        <p>Enter 6-digit owner PIN to modify product price-per-KG</p>
+      </div>
+      <form id="price-edit-form">
+        <div class="form-group">
+          <label>Target Product:</label>
+          <input type="text" id="target-product-name" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+          <label>Enter 6-Digit Password:</label>
+          <input type="password" id="input-owner-pass" placeholder="Enter 6-digit PIN" maxlength="6" required
+            class="form-control" />
+        </div>
+        <div class="form-group" id="new-price-group" style="display:none;">
+          <label>New Price per KG (₹):</label>
+          <input type="number" id="input-new-price" min="10" step="5" class="form-control"
+            placeholder="Enter new price per KG" />
+        </div>
+        <p id="price-error-msg" style="color:#ff4d4d; font-size:0.85rem; display:none; margin-bottom:1rem;"></p>
+        <button type="submit" class="btn-submit-order" id="btn-verify-pass">
+          <span>Verify Password & Edit Price →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
